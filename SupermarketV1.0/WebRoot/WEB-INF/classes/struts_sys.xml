@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN" "http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+	<constant name="struts.objectFactory" value="spring" />
+	<constant name="struts.multipart.maxSize" value="1073741824" />
+	<constant name="struts.i18n.encoding" value="UTF-8" />
+	<constant name="struts.devMode" value="false" />
+	<constant name="struts.multipart.saveDir" value="/tmp"></constant>
+	<package name="adminManage" extends="struts-default" namespace="">
+		<!--default-interceptor-ref name="validation"/ -->
+		<!-- 获取lincenece -->
+		<!-- <action name="getLicence" class="initializationSettingAction" method="getLicence"> 
+			<result name="success">/login.jsp</result> <result name="input">/no_licence.jsp</result> 
+			<result name="fail">/is_connect.jsp</result> <result name="noConnect">/service_connect_status.jsp</result> 
+			<result name="upgrade">/upgrade_progress_bar.jsp</result> </action> -->
+	</package>
+	<!-- ajax请求 -->
+	<package name="ajaxAdminManage" namespace="" extends="json-default">
+		<!-- 查询树形菜单 -->
+		<!-- <action name="ajaxQueryTreeMenu" class="menuAction" method="ajaxQueryTreeMenu"> 
+			<result type="json" /> </action> -->
+	</package>
+
+</struts>
